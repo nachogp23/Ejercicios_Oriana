@@ -34,7 +34,6 @@
 
 // console.log(separarDigitos(243));
 
-
 // Crea una función que tome como parámetro un array. Si todos los elementos del
 // array son estrictamente iguales, muestra por consola true, de lo contrario muestra
 // false.
@@ -62,7 +61,6 @@
 //Dado un array de números, muestra por consola un array con dichos números
 //ordenados en forma descendente.
 
-
 // const numeros = [13, 23, 1, 55, 0];
 
 // numeros.sort(function(a, b) { return b - a });
@@ -80,3 +78,38 @@
 
 // Crea una función que tome como parámetro un array de strings y muestra por
 //consola el string más largo
+
+// myArray = ["hola", "pep", "Antonioe", "hipolito", "pi"];
+
+// function longestString(array) {
+//     let longest = "";
+//     for (let i = 0; i < array.length - 1; i++) {
+//         if (array[i].length > array[i + 1].length) {
+//             longest = array[i];
+//         } else {
+//             longest = array[i + 1];
+//         }
+//     }
+//     return longest;
+// }
+
+// console.log(longestString(myArray));
+
+// Crea una función que tome dos arrays de números como parámetros. Une ambos
+// arrays, remueve valores duplicados (si hay alguno) y ordena los números en orden
+// ascendente.
+
+const myArray1 = [12, 23, 43, 87, 21, 69];
+const myArray2 = [32, 87, 19, 37, 44, 96, 45231];
+
+function concat(array1, array2) {
+    let array3 = array1.concat(array2);
+
+    uniq = [...new Set(array3)];
+
+    uniq.sort(function(a, b) { return a - b })
+
+    return uniq;
+}
+
+console.log(concat(myArray1, myArray2));
