@@ -188,15 +188,35 @@
 
 
 function setBackground() {
-    document.body.querySelector("p").style.backgroundColor = "green";
+    document.getElementById("p1").style.backgroundColor = "green";
+    document.getElementById("p2").style.backgroundColor = "red";
+
 
 }
+
+setBackground();
 
 // Dado el siguiente array de objetos, manipula el DOM para imprimir en el html como
 // un h1 los valores de cada una de las propiedades del objeto.Tip: debes hacer uso de
 // appendChild().
 
-// const dogs = [
-//     { name: "balto", type: "chihuaha" },
-//     { name: "loli", type: "puddle" },
-//     ];
+const dogs = [
+    { name: "balto", type: "chihuaha" },
+    { name: "loli", type: "puddle" },
+];
+
+
+const dog1Name = document.createElement("h1");
+const dog1Type = document.createElement("h1");
+const dog2Name = document.createElement("h1");
+const dog2Type = document.createElement("h1");
+
+dog1Name.innerHTML = dogs[0].name;
+dog1Type.innerHTML = dogs[0].type;
+dog2Name.innerHTML = dogs[1].name;
+dog2Type.innerHTML = dogs[1].type;
+
+document.body.appendChild(dog1Name);
+document.body.appendChild(dog1Type);
+document.body.appendChild(dog2Name);
+document.body.appendChild(dog2Type);
