@@ -29,7 +29,16 @@
 //individuales dentro de un array. Tip: puedes usar el método split();
 
 // function separarDigitos(num) {
-//   return num.toString().split("");
+
+//     const newArr = String(num).split("");
+//     const arr = [];
+//     newArr.forEach(function callback(element) {
+//         arr.push(Number(element));
+
+//     });
+
+//     return arr;
+//     //return num.toString().split("");
 // }
 
 // console.log(separarDigitos(243));
@@ -68,7 +77,7 @@
 // console.log(numeros);
 
 // Dado un array de strings, muestra por consola un array con sus valores ordenados
-//alfabéticamente
+// alfabéticamente
 
 // const myArray = ["snow", "esqui", "futbol", "basquet", "zebra"];
 
@@ -119,14 +128,17 @@
 
 // const myObj = { city: 'Sacramento', state: 'California', country: 'USA', continent: 'NorthAmerica' };
 
-// delete myObj.country;
+// function deleteCount(obj) {
+//     delete obj.country;
+//     return obj;
+// }
 
-// console.log(myObj);
+// console.log(deleteCount(myObj));
 
 // Trabajando con el mismo array anterior, muestra por consola el valor de la propiedad
 // “city”
 
-// const myObj = { city: 'Sacramento', state: 'California', country: 'USA', continent: 'NorthAmerica' };
+//const myObj = { city: 'Sacramento', state: 'California', country: 'USA', continent: 'NorthAmerica' };
 
 // console.log(myObj.city);
 
@@ -140,7 +152,7 @@
 
 // function replaceEmpty(object) {
 //     for (value in object) {
-//         if (object[value] == " " || object[value] == "") {
+//         if (object[value] === " " || object[value] === "") {
 //             object[value] = null;
 //         }
 //     }
@@ -157,7 +169,7 @@
 // de string. Muestra por consola el nuevo array.
 
 // ([{ city: 'Tokyo', country: 'Japan' }, { city: 'Bangkok', country: 'Thailand' }], 'Asia')
-//([{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }], 'Europe')
+// ([{ city: 'Stockholm', country: 'Sweden' }, { city: 'Paris', country: 'France' }], 'Europe')
 
 // let myArray1 = [
 //     { city: "Tokyo", country: "Japan" },
@@ -172,7 +184,6 @@
 // const continent2 = "Europe";
 
 // function addProperty(array, string) {
-
 //     for (value of array) {
 //         value.continent = string;
 //     }
@@ -183,28 +194,40 @@
 // console.log(addProperty(myArray1, continent1));
 // console.log(addProperty(myArray2, continent2));
 
+// const character = {
+//     name: "Darth Vader",
+//     realName: "Anakin Skywalker",
+//     planet: "Tatooine",
+//     children: ["Luke", "Leya"],
+//     phrase: function() {
+//         console.log(this.planet);
+//     },
+//     phrase2: () => { console.log("Kill you, is my aim") },
+// };
+
+// character.phrase2();
+
+// //destructuring
+// let {name, children} = character;
+// console.log(name.realName)
 // Dado el siguiente HTML, crea una función que, a través de la manipulación del
 // DOM, cambie el color de fondo de los párrafos, cada uno con colores diferentes.
 
+// function setBackground() {
+//     document.getElementById("p1").style.backgroundColor = "green";
+//     document.getElementById("p2").style.backgroundColor = "red";
+// }
 
-function setBackground() {
-    document.getElementById("p1").style.backgroundColor = "green";
-    document.getElementById("p2").style.backgroundColor = "red";
+// setBackground();
 
-
-}
-
-setBackground();
-
-// Dado el siguiente array de objetos, manipula el DOM para imprimir en el html como
-// un h1 los valores de cada una de las propiedades del objeto.Tip: debes hacer uso de
-// appendChild().
+// // Dado el siguiente array de objetos, manipula el DOM para imprimir en el html como
+// // un h1 los valores de cada una de las propiedades del objeto.Tip: debes hacer uso de
+// // appendChild().
 
 const dogs = [
     { name: "balto", type: "chihuaha" },
     { name: "loli", type: "puddle" },
 ];
-
 
 const dog1Name = document.createElement("h1");
 const dog1Type = document.createElement("h1");
