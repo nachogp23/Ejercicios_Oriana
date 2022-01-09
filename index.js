@@ -4,12 +4,16 @@
 // decimales) muestra por consola true. Si no, muestra por consola false.
 
 // function esEntero(num) {
-//     if (num % 1 == 0) {
-//         console.log(num + " es un número entero");
-//     } else {
-//         console.log(num + " no es un número entero");
-//     }
+//     // if (num % 1 == 0) {
+//     //     console.log(num + " es un número entero");
+//     // } else {
+//     //     console.log(num + " no es un número entero");
+//     // }
+
+//     return Number.isInteger(num);
 // }
+
+// console.log(esEntero(10.5));
 
 // Crea una función que tome como parámetros dos strings, puedes llamarlos a y b. Si
 // a contiene b, añade b al principio de a. Si no, añade b al final. Por ejemplo
@@ -88,15 +92,13 @@
 // Crea una función que tome como parámetro un array de strings y muestra por
 //consola el string más largo
 
-// myArray = ["hola", "pep", "Antonioe", "hipolito", "pi"];
+// myArray = ["holaoooooooooo", "pep", "Antonioe", "hipolitoooooooooooooooooo", "pi"];
 
 // function longestString(array) {
 //     let longest = "";
 //     for (let i = 0; i < array.length - 1; i++) {
-//         if (array[i].length > array[i + 1].length) {
+//         if (array[i].length > longest.length) {
 //             longest = array[i];
-//         } else {
-//             longest = array[i + 1];
 //         }
 //     }
 //     return longest;
@@ -108,20 +110,22 @@
 // arrays, remueve valores duplicados (si hay alguno) y ordena los números en orden
 // ascendente.
 
-// const myArray1 = [12, 23, 43, 87, 21, 69];
-// const myArray2 = [32, 87, 19, 37, 44, 96, 45231];
+const myArray1 = [12, 23, 43, 87, 21, 69];
+const myArray2 = [32, 87, 19, 37, 44, 96, 45231];
 
-// function concat(array1, array2) {
-//     let array3 = array1.concat(array2);
+function concat(array1, array2) {
+    let array3 = array1.concat(array2);
 
-//     uniq = [...new Set(array3)];
+    //const array3 = [...array1, ...array2];
+    console.log(array3);
+    uniq = [...new Set(array3)];
 
-//     uniq.sort(function(a, b) { return a - b })
+    uniq.sort(function(a, b) { return a - b })
 
-//     return uniq;
-// }
+    return uniq;
+}
 
-// console.log(concat(myArray1, myArray2));
+console.log(concat(myArray1, myArray2));
 
 // Crea una función que tome un objeto como parámetro. Remueve la propiedad
 // “country” y su valor y muestra el resultado por consola. Por ejemplo:
@@ -224,22 +228,22 @@
 // // un h1 los valores de cada una de las propiedades del objeto.Tip: debes hacer uso de
 // // appendChild().
 
-const dogs = [
-    { name: "balto", type: "chihuaha" },
-    { name: "loli", type: "puddle" },
-];
+// const dogs = [
+//     { name: "balto", type: "chihuaha" },
+//     { name: "loli", type: "puddle" },
+// ];
 
-const dog1Name = document.createElement("h1");
-const dog1Type = document.createElement("h1");
-const dog2Name = document.createElement("h1");
-const dog2Type = document.createElement("h1");
+// const dog1Name = document.createElement("h1");
+// const dog1Type = document.createElement("h1");
+// const dog2Name = document.createElement("h1");
+// const dog2Type = document.createElement("h1");
 
-dog1Name.innerHTML = dogs[0].name;
-dog1Type.innerHTML = dogs[0].type;
-dog2Name.innerHTML = dogs[1].name;
-dog2Type.innerHTML = dogs[1].type;
+// dog1Name.innerHTML = dogs[0].name;
+// dog1Type.innerHTML = dogs[0].type;
+// dog2Name.innerHTML = dogs[1].name;
+// dog2Type.innerHTML = dogs[1].type;
 
-document.body.appendChild(dog1Name);
-document.body.appendChild(dog1Type);
-document.body.appendChild(dog2Name);
-document.body.appendChild(dog2Type);
+// document.body.appendChild(dog1Name);
+// document.body.appendChild(dog1Type);
+// document.body.appendChild(dog2Name);
+// document.body.appendChild(dog2Type);
